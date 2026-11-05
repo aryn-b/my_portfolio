@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aryn Blaire N. Batiw-an | Portfolio</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="star-trail" aria-hidden="true"></div>
+
+  <header>
+    <div class="header__identity">
+      <a class="header__name" href="index.html"><strong>Aryn Blaire N. Batiw-an</strong></a>
+      <span class="header__email">arynblairebatiwan@gmail.com</span>
+    </div>
+
+    <nav aria-label="Main navigation">
+      <a href="#home" data-page-link="home">Home</a>
+      <a href="#about" data-page-link="about">About</a>
+      <a href="projects.html">Projects</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero hero--home" id="home" aria-labelledby="hero-title">
+      <img class="hero__portrait" src="images/profile.png" alt="Portrait of Aryn">
+      <div class="hero__content">
+        <p class="hero__eyebrow">Computer Science Student</p>
+        <h1 id="hero-title" aria-label="Hello, my name is Aryn Blaire N. Batiw-an.">
+          <span class="hero__hello" aria-hidden="true">Hello,</span><span class="hero__intro" aria-hidden="true"> my name is</span>
+          <span id="hero-name" aria-hidden="true">Aryn Blaire N. Batiw-an.</span>
+        </h1>
+        <div class="hero__actions">
+          <a class="hero__button" href="#about">About me <span aria-hidden="true">→</span></a>
+          <a class="hero__email" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=arynblairebatiwan@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email me">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+              <path d="M3.75 6.75h16.5v10.5H3.75z" />
+              <path d="m4.5 7.5 7.5 6 7.5-6" />
+            </svg>
+            <span>Email me</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero hero--about" id="about" aria-labelledby="about-title" hidden>
+      <h1 id="about-title" class="about__title">A little about me</h1>
+      <p class="hero__description about__description">
+        My journey into technology started at a young age, huddled over my mother’s old laptop.
+        Long before I knew what a compiler was, I kept messing with the command line, blindly testing different commands I searched up on the internet
+        out of pure curiosity.That childhood tinkering shaped my entire approach to computer science.
+        Today, I bring that same relentless curiosity and self-taught resilience to my program.
+      </p>
+      <div class="about__details">
+        <details class="about__card">
+          <summary>My background</summary>
+          <div class="about__content" popover="manual">
+            <p>I am a first-year Computer Science student at the University of the Cordilleras, currently pursuing a Bachelor of Science in Computer Science. I was born and raised in Kapangan, Benguet, and now live in La Trinidad, Benguet.I am a part of the Kankanaey ethnic group, one of the Indigenous peoples collectively known as Igorot, originating from the Cordillera region of Northern Luzon.</p>
+            <p>Outside academics, I have a strong interest in digital illustration and visual arts. I enjoy expressing ideas and storytelling through digital artwork, which has also influenced my appreciation for creativity and visual design.</p>
+            <p>As I continue developing my knowledge in Computer Science, I aspire to explore opportunities where I can combine my technical and creative interests, particularly in areas such as game development, UI/UX design, and cloud computing.</p>
+          </div>
+        </details>
+        <details class="about__card">
+          <summary>My educational attainment</summary>
+          <div class="about__content about__content--education" popover="manual">
+            <div class="education-timeline" aria-label="Education history">
+              <article class="education-timeline__entry">
+                <img
+                  class="education-timeline__logo"
+                  src="images/secb-logo.png"
+                  alt="Shekinah Educational Center of Benguet, Inc. logo"
+                >
+                <div class="education-timeline__details">
+                  <h2>Shekinah Educational Center of Benguet, Inc.</h2>
+                  <p>Elementary · 2014–2020</p>
+                </div>
+              </article>
+              <article class="education-timeline__entry">
+                <img
+                  class="education-timeline__logo"
+                  src="images/knhs-logo.png"
+                  alt="Kapangan National High School logo"
+                >
+                <div class="education-timeline__details">
+                  <h2>Kapangan National High School</h2>
+                  <p>Junior High School · 2020–2024</p>
+                </div>
+              </article>
+              <article class="education-timeline__entry">
+                <img
+                  class="education-timeline__logo"
+                  src="images/benhss-logo.png"
+                  alt="Benguet National High School logo"
+                >
+                <div class="education-timeline__details">
+                  <h2>Benguet National High School</h2>
+                  <p>Senior High School · 2024–2026</p>
+                </div>
+              </article>
+              <article class="education-timeline__entry">
+                <img
+                  class="education-timeline__logo"
+                  src="images/uc-logo-replacement.png"
+                  alt="University of the Cordilleras logo"
+                >
+                <div class="education-timeline__details">
+                  <h2>University of the Cordilleras</h2>
+                  <p>Ongoing</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </details>
+        <details class="about__card">
+          <summary>My goals</summary>
+          <div class="about__content" popover="manual">
+            <p>I aim to continuously develop my technical skills, broaden my understanding of Computer Science, and gain practical experience. I am eager to explore different career paths, particularly those that combine technology and creativity, while remaining open to new opportunities for learning and professional growth.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <nav class="page-navigation" aria-label="Previous and next pages">
+      <a class="page-navigation__link" id="page-previous" href="#home" hidden>← Home</a>
+      <a class="page-navigation__link" id="page-next" href="#about">Next: About →</a>
+    </nav>
+  </main>
+
+  <script>
+    const homeSection = document.querySelector("#home");
+    const aboutSection = document.querySelector("#about");
+    const pageLinks = document.querySelectorAll("[data-page-link]");
+    const pageNavigation = document.querySelector(".page-navigation");
+    const previousPageLink = document.querySelector("#page-previous");
+    const nextPageLink = document.querySelector("#page-next");
+
+    function showCurrentSection() {
+      const showAbout = window.location.hash === "#about";
+      homeSection.hidden = showAbout;
+      aboutSection.hidden = !showAbout;
+      document.body.classList.toggle("about-view", showAbout);
+      pageNavigation.hidden = !showAbout;
+      previousPageLink.hidden = !showAbout;
+      nextPageLink.href = showAbout ? "projects.html" : "#about";
+      nextPageLink.textContent = "Next →";
+
+      pageLinks.forEach((link) => {
+        if (link.dataset.pageLink === (showAbout ? "about" : "home")) {
+          link.setAttribute("aria-current", "page");
+        } else {
+          link.removeAttribute("aria-current");
+        }
+      });
+    }
+
+    window.addEventListener("hashchange", showCurrentSection);
+    showCurrentSection();
+
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const finePointer = window.matchMedia("(pointer: fine)");
+    const heroName = document.querySelector("#hero-name");
+
+    if (!reducedMotion.matches && !homeSection.hidden) {
+      const nameCharacters = Array.from(heroName.textContent);
+      let characterIndex = 0;
+      heroName.textContent = "";
+      heroName.parentElement.classList.add("is-typing");
+      const actions = document.querySelector(".hero__actions");
+      actions.classList.add("is-pending");
+
+      const typingTimer = window.setInterval(() => {
+        heroName.textContent += nameCharacters[characterIndex];
+        characterIndex += 1;
+
+        if (characterIndex === nameCharacters.length) {
+          window.clearInterval(typingTimer);
+          heroName.parentElement.classList.remove("is-typing");
+          window.setTimeout(() => actions.classList.remove("is-pending"), 250);
+        }
+      }, 75);
+    }
+
+    const aboutCards = [...document.querySelectorAll(".about__card")];
+    let activeAboutCard = null;
+    let hoveredAboutCard = null;
+    let aboutCloseTimer = null;
+
+    function clearAboutCloseTimer() {
+      window.clearTimeout(aboutCloseTimer);
+      aboutCloseTimer = null;
+    }
+
+    function closeAboutCard(card = activeAboutCard) {
+      if (!card) {
+        return;
+      }
+
+      const content = card.querySelector("[popover]");
+      if (content.matches(":popover-open")) {
+        content.hidePopover();
+      }
+      card.open = false;
+
+      if (activeAboutCard === card) {
+        activeAboutCard = null;
+      }
+    }
+
+    function openAboutCard(card) {
+      clearAboutCloseTimer();
+      if (activeAboutCard && activeAboutCard !== card) {
+        closeAboutCard(activeAboutCard);
+      }
+
+      activeAboutCard = card;
+      card.open = true;
+      const content = card.querySelector("[popover]");
+      if (!content.matches(":popover-open")) {
+        content.showPopover();
+      }
+    }
+
+    function scheduleAboutClose(card, delay) {
+      clearAboutCloseTimer();
+      aboutCloseTimer = window.setTimeout(() => closeAboutCard(card), delay);
+    }
+
+    aboutCards.forEach((card) => {
+      const summary = card.querySelector("summary");
+      const content = card.querySelector("[popover]");
+
+      summary.addEventListener("click", (event) => {
+        event.preventDefault();
+        if (card.open && hoveredAboutCard !== card) {
+          closeAboutCard(card);
+        } else {
+          openAboutCard(card);
+        }
+      });
+
+      summary.addEventListener("pointerenter", (event) => {
+        if (event.pointerType !== "touch" && finePointer.matches) {
+          hoveredAboutCard = card;
+          openAboutCard(card);
+        }
+      });
+
+      summary.addEventListener("pointerleave", (event) => {
+        if (event.pointerType !== "touch" && card.open) {
+          if (hoveredAboutCard === card) {
+            hoveredAboutCard = null;
+          }
+          scheduleAboutClose(card, 400);
+        }
+      });
+
+      content.addEventListener("pointerenter", clearAboutCloseTimer);
+      content.addEventListener("pointerleave", (event) => {
+        if (event.pointerType !== "touch") {
+          scheduleAboutClose(card, 80);
+        }
+      });
+    });
+
+    document.addEventListener("pointerdown", (event) => {
+      if (activeAboutCard && !activeAboutCard.contains(event.target) &&
+          !activeAboutCard.querySelector("[popover]").contains(event.target)) {
+        closeAboutCard();
+      }
+    });
+
+    window.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        closeAboutCard();
+      }
+    });
+    const starTrail = document.querySelector(".star-trail");
+    let lastStarTime = 0;
+
+    function addCursorStar(event) {
+      if (reducedMotion.matches || !finePointer.matches || event.pointerType === "touch") {
+        return;
+      }
+
+      const now = performance.now();
+      if (now - lastStarTime < 45) {
+        return;
+      }
+      lastStarTime = now;
+
+      const star = document.createElement("span");
+      star.className = "cursor-star";
+      star.style.left = `${event.clientX}px`;
+      star.style.top = `${event.clientY}px`;
+      star.style.setProperty("--star-size", `${4 + Math.random() * 6}px`);
+      star.style.setProperty("--star-drift", `${Math.random() * 32 - 16}px`);
+      star.style.setProperty("--star-duration", `${500 + Math.random() * 400}ms`);
+      star.style.setProperty("--star-hue", Math.random() > 0.5 ? "#ffd166" : "#ff9a2f");
+      starTrail.append(star);
+      star.addEventListener("animationend", () => star.remove(), { once: true });
+
+      if (starTrail.childElementCount > 24) {
+        starTrail.firstElementChild.remove();
+      }
+    }
+
+    window.addEventListener("pointermove", addCursorStar, { passive: true });
+  </script>
+</body>
+</html>
