@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculator source code | Aryn Blaire N. Batiw-an</title>
+  <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+  <header>
+    <div class="header__identity">
+      <a class="header__name" href="../../index.html"><strong>Aryn Blaire N. Batiw-an</strong></a>
+      <span class="header__email">Calculator source code</span>
+    </div>
+
+    <nav aria-label="Page navigation">
+      <a href="../../projects.html">Back to practice projects</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero source-page" aria-labelledby="source-title">
+      <p class="hero__eyebrow">Tutorial project · Java Swing</p>
+      <h1 id="source-title">Calculator <span>source.</span></h1>
+      <p class="hero__description">
+        This project was built by following a tutorial from Kenny Yip Coding on YouTube. The source files are shown below.
+      </p>
+
+      <section class="source-file" aria-labelledby="app-title">
+        <h2 id="app-title">App.java</h2>
+        <pre><code id="app-source">Loading App.java…</code></pre>
+      </section>
+
+      <section class="source-file" aria-labelledby="calculator-title">
+        <h2 id="calculator-title">Calculator.java</h2>
+        <pre><code id="calculator-source">Loading Calculator.java…</code></pre>
+      </section>
+      <p id="source-error" class="source-error" role="alert" hidden></p>
+    </section>
+
+    <nav class="page-navigation" aria-label="Previous and next pages">
+      <a class="page-navigation__link" href="../../projects.html">← Practice Projects</a>
+    </nav>
+  </main>
+
+  <script>
+    const sourceFiles = [
+      { path: "src/App.java", element: document.querySelector("#app-source") },
+      { path: "src/Calculator.java", element: document.querySelector("#calculator-source") }
+    ];
+
+    async function showSourceFiles() {
+      try {
+        const responses = await Promise.all(
+          sourceFiles.map(({ path }) => fetch(path))
+        );
+        const failedResponse = responses.find((response) => !response.ok);
+
+        if (failedResponse) {
+          throw new Error(`Could not load a source file (${failedResponse.status}).`);
+        }
+
+        const contents = await Promise.all(responses.map((response) => response.text()));
+        sourceFiles.forEach(({ element }, index) => {
+          element.textContent = contents[index];
+        });
+      } catch (error) {
+        document.querySelector("#source-error").textContent =
+          "The source files could not be displayed. Please try again after the site is published.";
+        sourceFiles.forEach(({ element }) => {
+          element.textContent = "Source could not be loaded.";
+        });
+        console.error(error);
+      }
+    }
+
+    showSourceFiles();
+  </script>
+</body>
+</html>
