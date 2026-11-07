@@ -49,75 +49,81 @@
     <section class="hero hero--about" id="about" aria-labelledby="about-title" hidden>
       <h1 id="about-title" class="about__title">A little about me</h1>
       <p class="hero__description about__description">
-        My journey into technology started at a young age, huddled over my mother’s old laptop.
-        Long before I knew what a compiler was, I kept messing with the command line, blindly testing different commands I searched up on the internet
-        out of pure curiosity.That childhood tinkering shaped my entire approach to computer science.
-        Today, I bring that same relentless curiosity and self-taught resilience to my program.
+        Hi! I’m Aryn, a first-year Computer Science student who enjoys digital illustration and exploring technology.
       </p>
-      <div class="about__details">
-        <details class="about__card">
-          <summary>My background</summary>
+      <section class="about__profile" aria-label="About me facts">
+        <details class="about__fact">
+          <summary><span>Birthday</span><span class="about__fact-preview">August 8</span></summary>
+          <div class="about__content" popover="manual"><p>August 8, 2008</p></div>
+        </details>
+        <details class="about__fact">
+          <summary><span>Age</span><span class="about__fact-preview">18 years old</span></summary>
+          <div class="about__content" popover="manual"><p>18 years old</p></div>
+        </details>
+        <details class="about__fact">
+          <summary><span>Location</span><span class="about__fact-preview">La Trinidad</span></summary>
+          <div class="about__content" popover="manual"><p>La Trinidad, Benguet</p></div>
+        </details>
+        <details class="about__fact about__fact--college">
+          <summary><span>College</span><span class="about__fact-preview">University of the Cordilleras</span></summary>
           <div class="about__content" popover="manual">
-            <p>I am a first-year Computer Science student at the University of the Cordilleras, currently pursuing a Bachelor of Science in Computer Science. I was born and raised in Kapangan, Benguet, and now live in La Trinidad, Benguet.I am a part of the Kankanaey ethnic group, one of the Indigenous peoples collectively known as Igorot, originating from the Cordillera region of Northern Luzon.</p>
-            <p>Outside academics, I have a strong interest in digital illustration and visual arts. I enjoy expressing ideas and storytelling through digital artwork, which has also influenced my appreciation for creativity and visual design.</p>
-            <p>As I continue developing my knowledge in Computer Science, I aspire to explore opportunities where I can combine my technical and creative interests, particularly in areas such as game development, UI/UX design, and cloud computing.</p>
+            <p>University of the Cordilleras</p>
+            <p>First year · BS Computer Science</p>
           </div>
         </details>
+        <details class="about__fact">
+          <summary><span>Hobbies</span><span class="about__fact-preview">Digital illustration</span></summary>
+          <div class="about__content" popover="manual">
+            <p>I enjoy digital illustration, especially creating different character designs and landscapes. I like experimenting with different art apps, color techniques, and visual styles.</p>
+          </div>
+        </details>
+        <details class="about__fact">
+          <summary><span>Skills</span><span class="about__fact-preview">HTML, CSS, Java &amp; more</span></summary>
+          <div class="about__content" popover="manual">
+            <p>HTML and CSS · Java (beginner) · Java Swing (beginner) · Problem-solving · Digital illustration</p>
+          </div>
+        </details>
+        <details class="about__fact">
+          <summary><span>Interests</span><span class="about__fact-preview">Games, UI/UX, cloud</span></summary>
+          <div class="about__content" popover="manual">
+            <p>I’m curious about game development because it combines programming and creativity. I’m also currently learning about UI/UX design and cloud computing.</p>
+          </div>
+        </details>
+      </section>
+      <div class="about__education">
         <details class="about__card">
-          <summary>My educational attainment</summary>
+          <summary>Education timeline</summary>
           <div class="about__content about__content--education" popover="manual">
             <div class="education-timeline" aria-label="Education history">
               <article class="education-timeline__entry">
-                <img
-                  class="education-timeline__logo"
-                  src="images/secb-logo.png"
-                  alt="Shekinah Educational Center of Benguet, Inc. logo"
-                >
+                <img class="education-timeline__logo" src="images/secb-logo.png" alt="Shekinah Educational Center of Benguet, Inc. logo">
                 <div class="education-timeline__details">
                   <h2>Shekinah Educational Center of Benguet, Inc.</h2>
                   <p>Elementary · 2014–2020</p>
                 </div>
               </article>
               <article class="education-timeline__entry">
-                <img
-                  class="education-timeline__logo"
-                  src="images/knhs-logo.png"
-                  alt="Kapangan National High School logo"
-                >
+                <img class="education-timeline__logo" src="images/knhs-logo.png" alt="Kapangan National High School logo">
                 <div class="education-timeline__details">
                   <h2>Kapangan National High School</h2>
                   <p>Junior High School · 2020–2024</p>
                 </div>
               </article>
               <article class="education-timeline__entry">
-                <img
-                  class="education-timeline__logo"
-                  src="images/benhss-logo.png"
-                  alt="Benguet National High School logo"
-                >
+                <img class="education-timeline__logo" src="images/benhss-logo.png" alt="Benguet National High School logo">
                 <div class="education-timeline__details">
                   <h2>Benguet National High School</h2>
                   <p>Senior High School · 2024–2026</p>
                 </div>
               </article>
               <article class="education-timeline__entry">
-                <img
-                  class="education-timeline__logo"
-                  src="images/uc-logo-replacement.png"
-                  alt="University of the Cordilleras logo"
-                >
+                <img class="education-timeline__logo" src="images/uc-logo-replacement.png" alt="University of the Cordilleras logo">
                 <div class="education-timeline__details">
                   <h2>University of the Cordilleras</h2>
                   <p>Ongoing</p>
                 </div>
               </article>
             </div>
-          </div>
-        </details>
-        <details class="about__card">
-          <summary>My goals</summary>
-          <div class="about__content" popover="manual">
-            <p>I aim to continuously develop my technical skills, broaden my understanding of Computer Science, and gain practical experience. I am eager to explore different career paths, particularly those that combine technology and creativity, while remaining open to new opportunities for learning and professional growth.</p>
           </div>
         </details>
       </div>
@@ -183,7 +189,7 @@
       }, 75);
     }
 
-    const aboutCards = [...document.querySelectorAll(".about__card")];
+    const aboutCards = [...document.querySelectorAll(".about__card, .about__fact")];
     let activeAboutCard = null;
     let hoveredAboutCard = null;
     let aboutCloseTimer = null;
