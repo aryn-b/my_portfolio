@@ -937,23 +937,24 @@ body.achievements-view .education-page__timeline-wrap {
 }
 
 body.achievements-view .education-page__timeline-wrap .education-timeline {
-  --education-logo-size: clamp(58px, 9vh, 86px);
+  --education-logo-size: clamp(64px, 12vh, 100px);
+  --timeline-gap: 30px;
   gap: 8px;
 }
 
 body.achievements-view .education-page__timeline-wrap .education-timeline__entry {
-  gap: 16px;
+  gap: var(--timeline-gap, 30px);
   padding: 0 4px;
 }
 
 body.achievements-view .education-page__timeline-wrap .education-timeline__entry::before {
-  top: calc(var(--education-logo-size) + 10px);
+  top: calc(var(--education-logo-size) + (var(--timeline-gap, 30px) / 2) - 5px);
   width: 10px;
   height: 10px;
 }
 
 body.achievements-view .education-page__timeline-wrap .education-timeline::before {
-  top: calc(var(--education-logo-size) + 15px);
+  top: calc(var(--education-logo-size) + (var(--timeline-gap, 30px) / 2) - 1px);
 }
 
 body.achievements-view .education-page__timeline-wrap .education-timeline__details h3 {
@@ -1106,10 +1107,11 @@ body.achievements-view .page-navigation {
 
   body.achievements-view .education-page__timeline-wrap .education-timeline {
     --education-logo-size: clamp(38px, 7vh, 56px);
+    --timeline-gap: 18px;
   }
 
   body.achievements-view .education-page__timeline-wrap .education-timeline__entry {
-    gap: 9px;
+    gap: var(--timeline-gap, 18px);
   }
 
   body.achievements-view .education-page__section > h2 {
