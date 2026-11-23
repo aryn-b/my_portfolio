@@ -1821,3 +1821,77 @@ p {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Family & Friends photo gallery */
+.family-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 22px;
+  margin: 26px 0 30px;
+}
+
+.family-gallery__item {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgb(255 177 59 / 25%);
+  border-radius: 6px;
+  background: linear-gradient(145deg, rgb(255 255 255 / 4%), rgb(255 177 59 / 3%));
+  transition: border-color 180ms ease, transform 180ms ease;
+}
+
+.family-gallery__item:hover {
+  border-color: rgb(255 177 59 / 60%);
+  transform: translateY(-3px);
+}
+
+.family-gallery__item img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.family-gallery__item figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 14px 14px;
+  color: #cfcac1;
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+.family-gallery__item figcaption strong {
+  color: #ffd27b;
+  font-size: 0.98rem;
+}
+
+.family-gallery__empty {
+  margin: 26px 0 30px;
+  padding: 18px 20px;
+  border-left: 2px solid rgb(255 177 59 / 55%);
+  background: rgb(255 255 255 / 3%);
+  color: #b5b1aa;
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+/* Hide the empty message automatically once a photo is added */
+.family-gallery:has(.family-gallery__item) + .family-gallery__empty {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .family-gallery__item,
+  .family-gallery__item:hover {
+    transition: none;
+    transform: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .family-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+}
