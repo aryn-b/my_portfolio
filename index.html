@@ -9,7 +9,7 @@
   <script src="theme.js" defer></script>
 </head>
 
-<body>
+<body class="home about-view">
   <div class="star-trail" aria-hidden="true"></div>
   <section class="intro-screen" aria-label="Opening animation" aria-modal="true" role="dialog" hidden>
     <p class="intro-screen__sign" aria-hidden="true">ARYN’S CYBERSPACE <span>OPEN</span></p>
@@ -61,95 +61,46 @@
 
     <section class="hero hero--about" id="about" aria-labelledby="about-title" hidden>
       <h1 id="about-title" class="about__title">Personal Information</h1>
-      <p class="hero__description about__description">
-        Hi! I’m Aryn, a first-year Computer Science student who enjoys digital illustration and exploring technology.
-      </p>
-      <section class="about__profile" aria-label="Personal information">
-        <details class="about__fact">
-          <summary><span>Name</span><span class="about__fact-preview">Aryn Blaire N. Batiw-an</span></summary>
-          <div class="about__content" popover="manual">
-            <p>Aryn Blaire N. Batiw-an</p>
-          </div>
-        </details>
-        <details class="about__fact">
-          <summary><span>Gender</span><span class="about__fact-preview">Female</span></summary>
-          <div class="about__content" popover="manual">
-            <p>Female</p>
-          </div>
-        </details>
-        <details class="about__fact">
-          <summary><span>Status</span><span class="about__fact-preview">Single</span></summary>
-          <div class="about__content" popover="manual">
-            <p>Single</p>
-          </div>
-        </details>
-        <details class="about__fact">
-          <summary><span>Age</span><span class="about__fact-preview">18 years old</span></summary>
-          <div class="about__content" popover="manual">
-            <p>18 years old</p>
-          </div>
-        </details>
-        <details class="about__fact">
-          <summary><span>Birthdate</span><span class="about__fact-preview">August 8, 2008</span></summary>
-          <div class="about__content" popover="manual">
-            <p>August 8, 2008</p>
-          </div>
-        </details>
-        <details class="about__fact">
-          <summary><span>Program</span><span class="about__fact-preview">BS Computer Science</span></summary>
-          <div class="about__content" popover="manual">
-            <p>Bachelor of Science in Computer Science</p>
-          </div>
-        </details>
-        <details class="about__fact">
-          <summary><span>College</span><span class="about__fact-preview">College of Information Technology and Computer Science</span></summary>
-          <div class="about__content" popover="manual">
-            <p>College of Information Technology and Computer Science</p>
-          </div>
-        </details>
-        <details class="about__fact">
-          <summary><span>Year Level</span><span class="about__fact-preview">First year</span></summary>
-          <div class="about__content" popover="manual">
-            <p>First year</p>
-          </div>
-        </details>
-        <details class="about__fact">
-          <summary><span>School</span><span class="about__fact-preview">University of the Cordilleras</span></summary>
-          <div class="about__content" popover="manual">
-            <p>University of the Cordilleras</p>
-          </div>
-        </details>
-        <details class="about__fact">
-          <summary><span>Hobbies</span><span class="about__fact-preview">Digital illustration</span></summary>
-          <div class="about__content" popover="manual">
-            <p>I enjoy digital illustration, especially creating different character designs and landscapes. I like experimenting with different art apps, color techniques, and visual styles.</p>
-          </div>
-        </details>
-        <details class="about__fact">
-          <summary><span>Skills</span><span class="about__fact-preview">HTML, CSS, Java &amp; more</span></summary>
-          <div class="about__content" popover="manual">
-            <p>HTML and CSS · Java (beginner) · Java Swing (beginner) · Problem-solving · Digital illustration</p>
-          </div>
-        </details>
-        <details class="about__fact">
-          <summary><span>Address</span><span class="about__fact-preview">La Trinidad, Benguet</span></summary>
-          <div class="about__content" popover="manual">
-            <p>La Trinidad, Benguet</p>
-          </div>
-        </details>
-        <details class="about__fact">
-          <summary><span>Email</span><span class="about__fact-preview">arynblairebatiwan@gmail.com</span></summary>
-          <div class="about__content" popover="manual">
-            <p>arynblairebatiwan@gmail.com</p>
-          </div>
-        </details>
-        <details class="about__fact">
-          <summary><span>Phone Number</span><span class="about__fact-preview">09624697996</span></summary>
-          <div class="about__content" popover="manual">
-            <p>09624697996</p>
-          </div>
-        </details>
-      </section>
+    
+      <div class="pds" aria-label="Personal data sheet">
+        <section class="pds__section pds__section--personal" aria-labelledby="pds-personal">
+          <h2 class="pds__heading" id="pds-personal">Personal Details</h2>
+          <dl class="pds__list">
+          <div class="pds__row"><dt>Name</dt><dd>Aryn Blaire N. Batiw-an</dd></div>
+          <div class="pds__row"><dt>Gender</dt><dd>Female</dd></div>
+          <div class="pds__row"><dt>Civil Status</dt><dd>Single</dd></div>
+          <div class="pds__row"><dt>Age</dt><dd>18 years old</dd></div>
+          <div class="pds__row"><dt>Birthdate</dt><dd>August 8, 2008</dd></div>
+          <div class="pds__row"><dt>Height</dt><dd>152cm</dd></div>
+          <div class="pds__row"><dt>Weight</dt><dd>65kg</dd></div>
+          <div class="pds__row"><dt>Blood Type</dt><dd>A+</dd></div>
+          </dl>
+        </section>
+        <section class="pds__section " aria-labelledby="pds-academic">
+          <h2 class="pds__heading" id="pds-academic">Academic Information</h2>
+          <dl class="pds__list">
+          <div class="pds__row"><dt>Program</dt><dd>Bachelor of Science in Computer Science</dd></div>
+          <div class="pds__row"><dt>College</dt><dd>College of Information Technology and Computer Science</dd></div>
+          <div class="pds__row"><dt>Year Level</dt><dd>First year</dd></div>
+          <div class="pds__row"><dt>School</dt><dd>University of the Cordilleras</dd></div>
+          </dl>
+        </section>
+        <section class="pds__section " aria-labelledby="pds-contact">
+          <h2 class="pds__heading" id="pds-contact">Contact Information</h2>
+          <dl class="pds__list">
+          <div class="pds__row"><dt>Address</dt><dd>La Trinidad, Benguet</dd></div>
+          <div class="pds__row"><dt>Email</dt><dd>arynblairebatiwan@gmail.com</dd></div>
+          <div class="pds__row"><dt>Phone Number</dt><dd>09624697996</dd></div>
+          </dl>
+        </section>
+        <section class="pds__section pds__section--wide" aria-labelledby="pds-extra">
+          <h2 class="pds__heading" id="pds-extra">Hobbies &amp; Skills</h2>
+          <dl class="pds__list">
+          <div class="pds__row"><dt>Hobbies</dt><dd>I enjoy digital illustration, especially creating different character designs and landscapes. I like experimenting with different art apps, color techniques, and visual styles.</dd></div>
+          <div class="pds__row"><dt>Skills</dt><dd>HTML and CSS · Java (beginner) · Java Swing (beginner) · Problem-solving · Digital illustration</dd></div>
+          </dl>
+        </section>
+      </div>
     </section>
 
     <nav class="page-navigation" aria-label="Previous and next pages">
@@ -212,100 +163,6 @@
       }, 75);
     }
 
-    const aboutCards = [...document.querySelectorAll(".about__fact")];
-    let activeAboutCard = null;
-    let hoveredAboutCard = null;
-    let aboutCloseTimer = null;
-
-    function clearAboutCloseTimer() {
-      window.clearTimeout(aboutCloseTimer);
-      aboutCloseTimer = null;
-    }
-
-    function closeAboutCard(card = activeAboutCard) {
-      if (!card) {
-        return;
-      }
-
-      const content = card.querySelector("[popover]");
-      if (content.matches(":popover-open")) {
-        content.hidePopover();
-      }
-      card.open = false;
-
-      if (activeAboutCard === card) {
-        activeAboutCard = null;
-      }
-    }
-
-    function openAboutCard(card) {
-      clearAboutCloseTimer();
-      if (activeAboutCard && activeAboutCard !== card) {
-        closeAboutCard(activeAboutCard);
-      }
-
-      activeAboutCard = card;
-      card.open = true;
-      const content = card.querySelector("[popover]");
-      if (!content.matches(":popover-open")) {
-        content.showPopover();
-      }
-    }
-
-    function scheduleAboutClose(card, delay) {
-      clearAboutCloseTimer();
-      aboutCloseTimer = window.setTimeout(() => closeAboutCard(card), delay);
-    }
-
-    aboutCards.forEach((card) => {
-      const summary = card.querySelector("summary");
-      const content = card.querySelector("[popover]");
-
-      summary.addEventListener("click", (event) => {
-        event.preventDefault();
-        if (card.open && hoveredAboutCard !== card) {
-          closeAboutCard(card);
-        } else {
-          openAboutCard(card);
-        }
-      });
-
-      summary.addEventListener("pointerenter", (event) => {
-        if (event.pointerType !== "touch" && finePointer.matches) {
-          hoveredAboutCard = card;
-          openAboutCard(card);
-        }
-      });
-
-      summary.addEventListener("pointerleave", (event) => {
-        if (event.pointerType !== "touch" && card.open) {
-          if (hoveredAboutCard === card) {
-            hoveredAboutCard = null;
-          }
-          scheduleAboutClose(card, 400);
-        }
-      });
-
-      content.addEventListener("pointerenter", clearAboutCloseTimer);
-      content.addEventListener("pointerleave", (event) => {
-        if (event.pointerType !== "touch") {
-          scheduleAboutClose(card, 80);
-        }
-      });
-    });
-
-    document.addEventListener("pointerdown", (event) => {
-      if (activeAboutCard && !activeAboutCard.contains(event.target) &&
-          !activeAboutCard.querySelector("[popover]").contains(event.target)) {
-        closeAboutCard();
-      }
-    });
-
-    window.addEventListener("keydown", (event) => {
-      if (event.key === "Escape") {
-        closeAboutCard();
-      }
-    });
     const starTrail = document.querySelector(".star-trail");
     let lastStarTime = 0;
 
