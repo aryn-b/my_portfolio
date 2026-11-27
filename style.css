@@ -2027,7 +2027,9 @@ body.family-view {
   height: 100svh;
   min-height: 0;
   flex-direction: column;
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
 }
 
 body.family-view header {
@@ -2069,35 +2071,64 @@ body.family-view .family-gallery {
   width: 100%;
   max-width: none;
   height: auto;
-  grid-auto-columns: minmax(0, 1fr);
+  /* cards sit at the top of whatever space is left, never stretched */
+  align-content: start;
+  justify-content: center;
   grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
   grid-template-columns: none;
-  grid-template-rows: minmax(0, 1fr);
+  grid-template-rows: auto;
   margin: 0;
+  gap: 18px;
 }
 
 body.family-view .family-gallery__item {
   display: flex;
   min-height: 0;
+  overflow: hidden;
   flex-direction: column;
+  border-radius: 6px;
 }
 
+/*
+  One shared portrait frame for every photo, sized from the available height so
+  four cards plus captions always fit on screen without scrolling.
+*/
 body.family-view .family-gallery__item img {
-  flex: 1 1 0;
+  flex: none;
   width: 100%;
-  min-height: 0;
+  height: auto;
+  aspect-ratio: 3 / 4;
   object-fit: cover;
-  aspect-ratio: auto;
-  object-position: center 30%;
+  object-position: center 50%;
+}
+
+/* Each photo has its people in a different place, so aim the crop per photo */
+body.family-view .family-gallery__item:nth-child(1) img {
+  object-position: center 84%;
+}
+
+body.family-view .family-gallery__item:nth-child(2) img {
+  object-position: center 38%;
+}
+
+body.family-view .family-gallery__item:nth-child(3) img {
+  object-position: center 58%;
+}
+
+body.family-view .family-gallery__item:nth-child(4) img {
+  object-position: center 50%;
 }
 
 body.family-view .family-gallery__item figcaption {
   flex: none;
+  padding: 12px 14px 14px;
 }
 
 body.family-view .page-navigation {
   flex: none;
   width: 100%;
+  margin-top: auto;
   padding: 0 0 18px;
 }
 
